@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jady Variedades - Papelaria e variedades em Jardim Sandra, Cotia - SP.">
+  <title>Jady Variedades | Papelaria em Cotia</title>
+  <style>
+    :root{
+      --pink:#ff4f87; --purple:#7c3aed; --dark:#17131f; --muted:#6b6473;
+      --bg:#fff8fb; --white:#fff; --line:#eee5ef; --green:#20c463;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.2rem}
+    .logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--pink),var(--purple));display:grid;place-items:center;color:#fff;font-size:22px}.logo-img{width:50px;height:50px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 4px 14px rgba(80,30,90,.15)}
+    .links{display:flex;gap:24px;font-weight:700;color:#514a58}
+    .links a:hover{color:var(--pink)}
+    .hero{padding:88px 0 70px;background:radial-gradient(circle at 90% 10%,#ffd5e4,transparent 32%),radial-gradient(circle at 10% 20%,#e5d6ff,transparent 28%)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+    .tag{display:inline-block;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid #f1dbe6;color:var(--purple);font-weight:800;margin-bottom:18px}
+    h1{font-size:clamp(2.4rem,6vw,4.7rem);line-height:1.03;letter-spacing:-2px}
+    h1 span{color:var(--pink)}
+    .hero p{font-size:1.12rem;color:var(--muted);max-width:650px;margin:22px 0 28px}
+    .buttons{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:14px;font-weight:900;border:2px solid transparent;transition:.2s}
+    .btn:hover{transform:translateY(-2px)}
+    .primary{background:var(--green);color:#fff}
+    .secondary{background:#fff;border-color:var(--line)}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:0 25px 60px rgba(64,35,74,.12)}
+    .hero-card .big{font-size:5rem;text-align:center}
+    .hero-card h3{text-align:center;font-size:1.4rem;margin:4px 0}
+    .hero-card p{text-align:center;margin:0 auto 20px}
+    .quick{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .quick div{background:#fff8fb;border-radius:16px;padding:14px;text-align:center;font-weight:800}
+    section{padding:78px 0}
+    .section-title{text-align:center;margin-bottom:38px}
+    .section-title h2{font-size:2.4rem}
+    .section-title p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 10px 30px rgba(50,20,60,.05)}
+    .icon{font-size:2rem;margin-bottom:12px}
+    .card h3{margin-bottom:7px}
+    .card p{color:var(--muted)}
+    .info{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .info-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px}
+    .info-card h3{margin-bottom:16px;font-size:1.3rem}
+    .row{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+    .row:last-child{border:0}
+    .row b{min-width:92px}
+    .map{width:100%;height:330px;border:0;border-radius:20px;margin-top:15px}
+    .cta{background:linear-gradient(135deg,#7c3aed,#ff4f87);color:#fff;border-radius:30px;padding:45px;text-align:center}
+    .cta p{opacity:.9;margin:8px auto 22px;max-width:650px}
+    footer{background:#17131f;color:#fff;padding:35px 0;margin-top:70px}
+    .footer-flex{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    footer small{color:#bdb5c5}
+    .float{position:fixed;right:20px;bottom:20px;background:var(--green);color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:28px;box-shadow:0 12px 25px rgba(0,0,0,.2);z-index:30}
+    @media(max-width:800px){
+      .links{display:none}.hero-grid,.info{grid-template-columns:1fr}.cards{grid-template-columns:1fr}
+      .hero{padding-top:55px}.hero-card{max-width:520px;margin:auto}
+      .footer-flex{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="container">
+    <a class="brand" href="#inicio"><img class="logo-img" src="data:image/jpeg;base64,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ifw+X+lZzehhVlaJeooornOI/9DLooor9UP1wKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACpKjqSgAooooAKKKKACiiiqRSCiiiqKJKKKKhgFMPWn0w9aT2ASiiiswCiiigAqQdKjqQdKCkFFFFBQ1utKOlI3WlHSgB61NUS9alqWXFBRRRUmo9elLSL0paACiiikxMKKKKggKKKKACiiigpBUlR1JQDEbpTR1pzdKaOtBmwyaSiigkKKKKAEbpQOlDdKB0oAkXpQ3ShelDdKbEwXpUo6VEvSpR0pEDl61sW6hYVA+v581jr1rUs2LW6k+rD8mIrKoc9bZFqiiisDjP/0cuiiiv1Q/XAooooAKKKKACiiigAooooAKKKKACiiigAooooAKXBoHWn0AMwaMGn0UAMwaMGn0UAMwafRRQAUUUUAFFFFABRRRVIpC4NLtNOHSnjpTuUMopT1pKlgFMxk0+ipYDMGjBp9FQAzBowafRQAzBp9FFBSCiiigoaRmnAHFPHSloARetS0wdamXpUs0iMoqSipNBF6UtFFABRRRSYmFFFFQQFFOWnUAR0VJTW60FIbUlR1JQDEbpTR1pzdKaOtBmxKKKKCQooooARulA6UEZpQO1AD16UN0pQOwpSMUCY0DFSgHFFSDpQQNA7mr1i3MkZ7EMPoRj+lVT0FIknkypKfujhvof8Dg1EldGVRXibdFFFcxwH/9LLooor9UP1wKKKKACiiigAooooAKKKKACiiigAooooAKKXBowadgAdafTADmn0gCiiinYAoooosAUUUuDSASilwaMGnYrUSilwaMGiwaiUUuDSU0CRIOlPHSmDpTx0o6lDT1pKU9aSkwCiiipYBRRRUAFFFFA7BRS4NLtNA0htFO20baVy7CjpS0ADHWnYHrRcLCDrUy9KhwPWpV6VLZcR1FFFI0CiiigAooopMlhRS4NGDUEirTqatOoAKa3WnUhGaBoZUlN2mnUDYjdKaOtOPI4pADmgyY2ilwaSgQUUuDRg0AAGaeB2FCDvUlACqtIwwKkpsinAxQJjakHSmYNPoIHHoKaQCMGnHoKbQBds58DyH5ZBxu7r/iOlXfMH91KxGVX+8A31pnkxf3FrLkMHSXc//9PLooor9UP1wKKKKACiiigAooooAKKKKACiiigApR1pKUda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" alt="Jady Variedades"> <span>Jady Variedades</span></a>
+    <div class="links">
+      <a href="#sobre">Sobre</a><a href="#servicos">Produtos</a><a href="#delivery">Delivery</a><a href="#horarios">Horários</a><a href="#localizacao">Localização</a>
+    </div>
+    <a class="btn primary" href="https://wa.me/5511973756040?text=Ol%C3%A1%2C%20Jady%20Variedades!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos." target="_blank">WhatsApp</a>
+  </nav>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="tag">🛵 AGORA TAMBÉM COM DELIVERY!</span>
+        <h1>Jady <span>Variedades</span></h1>
+        <p>Papelaria e variedades para o seu dia a dia. E agora ficou ainda mais fácil: <strong>também fazemos delivery!</strong> Peça seus produtos pelo WhatsApp.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://wa.me/5511973756040?text=Ol%C3%A1%2C%20Jady%20Variedades!">💬 Falar no WhatsApp</a>
+          <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Jady+Variedades,+Estrada+dos+Fischer%27s,+1717,+Jardim+Sandra,+Cotia,+SP" target="_blank">📍 Ver localização</a><a class="btn secondary" href="https://www.instagram.com/jadyvariedadespravoce/" target="_blank" rel="noopener">📸 Instagram</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="big">🛍️</div>
+        <h3>Variedade para você</h3>
+        <p>Atendimento local em Jardim Sandra, Cotia.</p>
+        <div class="quick">
+          <div>📚 Papelaria</div><div>🖊️ Material escolar</div>
+          <div>💻 Informática</div><div>🏠 Variedades</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tudo mais perto de você</h2>
+        <p>Uma página simples para encontrar a Jady Variedades e entrar em contato rapidamente.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">📚</div><h3>Papelaria</h3><p>Artigos de papelaria, escritório e materiais escolares.</p></article>
+        <article class="card"><div class="icon">💻</div><h3>Informática</h3><p>Produtos e suprimentos de informática.</p></article>
+        <article class="card"><div class="icon">🛍️</div><h3>Variedades</h3><p>Encontre diferentes itens para casa e uso pessoal.</p></article><article class="card"><div class="icon">🛵</div><h3>Delivery</h3><p>Fazemos entregas para você. Chame no WhatsApp para consultar disponibilidade e pedir seu delivery.</p><a class="btn primary" style="margin-top:14px" href="https://wa.me/5511973756040?text=Ol%C3%A1%2C%20Jady%20Variedades!%20Quero%20fazer%20um%20pedido%20por%20delivery." target="_blank">Pedir delivery</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+      <div class="section-title">
+        <h2>O que você encontra</h2>
+        <p>Algumas das categorias associadas à loja.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">✏️</div><h3>Material escolar</h3><p>Cadernos, canetas, lápis, borrachas e outros materiais.</p></article>
+        <article class="card"><div class="icon">🖨️</div><h3>Escritório e informática</h3><p>Materiais de escritório e suprimentos de informática.</p></article>
+        <article class="card"><div class="icon">🎁</div><h3>Outras variedades</h3><p>Itens diversos para facilitar suas compras do dia a dia.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="horarios">
+    <div class="container info">
+      <div class="info-card">
+        <h3>🕒 Horário de funcionamento</h3>
+        <div class="row"><b>Domingo</b><span>09:00 – 12:00</span></div>
+        <div class="row"><b>Seg–Sáb</b><span>08:00 – 19:00</span></div>
+      </div>
+      <div class="info-card">
+        <h3>📲 Contato</h3>
+        <div class="row"><b>WhatsApp</b><a href="https://wa.me/5511973756040" target="_blank">(11) 97375-6040</a></div>
+        <div class="row"><b>Instagram</b><a href="https://www.instagram.com/jadyvariedadespravoce/" target="_blank" rel="noopener">@jadyvariedadespravoce</a></div><div class="row"><b>Delivery</b><span>Disponível — consulte pelo WhatsApp</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="delivery">
+    <div class="container">
+      <div class="cta">
+        <h2>🛵 A Jady Variedades também faz delivery!</h2>
+        <p>Escolha seus produtos sem precisar sair de casa. Fale com a loja pelo WhatsApp para consultar os produtos disponíveis e combinar a entrega.</p>
+        <a class="btn secondary" href="https://wa.me/5511973756040?text=Ol%C3%A1%2C%20Jady%20Variedades!%20Quero%20fazer%20um%20pedido%20por%20delivery." target="_blank">💬 Pedir pelo WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="localizacao">
+    <div class="container">
+      <div class="section-title">
+        <h2>📍 Como chegar</h2>
+        <p>Jardim Sandra, Cotia - SP</p>
+      </div>
+      <div class="info-card">
+        <h3>Jady Variedades</h3>
+        <p>Estrada dos Fischer's, 1717 — Jardim Sandra, Cotia - SP, 06719-400</p>
+        <iframe class="map" loading="lazy" src="https://www.google.com/maps?q=Jady+Variedades,+Estrada+dos+Fischer%27s,+1717,+Jardim+Sandra,+Cotia,+SP&output=embed"></iframe>
+        <br>
+        <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Jady+Variedades,+Estrada+dos+Fischer%27s,+1717,+Jardim+Sandra,+Cotia,+SP" target="_blank">Abrir no Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h2>Precisa de algum produto?</h2>
+        <p>Chame a Jady Variedades pelo WhatsApp e pergunte sobre disponibilidade.</p>
+        <a class="btn secondary" href="https://wa.me/5511973756040?text=Ol%C3%A1%2C%20Jady%20Variedades!%20Voc%C3%AAs%20t%C3%AAm%20um%20produto%20espec%C3%ADfico%20dispon%C3%ADvel%3F" target="_blank">💬 Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-flex">
+    <div><strong>Jady Variedades</strong><br><small>Papelaria e variedades • Cotia - SP</small></div>
+    <small>© 2026 Jady Variedades. Todos os direitos reservados.</small>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/5511973756040" target="_blank" aria-label="WhatsApp">💬</a>
+</body>
+</html>
